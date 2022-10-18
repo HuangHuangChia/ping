@@ -1,6 +1,6 @@
 @Echo off
 C:
-cd C:\ping
+cd C:\Task\ping
 Rem 參數設定
 Set PING_OPTIONS=-n 1
 
@@ -37,7 +37,7 @@ echo %Date% %Time%-Fail:%%i>>"%Ping_Err%"
 echo 網路ping失敗:%%i>>"%Ping_Alert%"
 
 REM Call line Notify
-C:\LineNotify\LineNotify_general.exe "0xQH1k7AuD1CERF9Hy12XNv8MnTOE8V6MwitbfdJHe9" %PING_Alert%
+C:\Task\LineNotify\LineNotify_general.exe "0xQH1k7AuD1CERF9Hy12XNv8MnTOE8V6MwitbfdJHe9" %PING_Alert%
 del  %PING_Alert%
 )
 rem else  (echo %Date% %Time%-Pass:%%i>> "%PING_OK%")
